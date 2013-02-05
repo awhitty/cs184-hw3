@@ -1,0 +1,189 @@
+<!doctype html>
+<html>
+    <head>
+        <title>CS 184 Style Guide</title>
+
+        <link rel="stylesheet" href="/css/no-bootstrap.css">
+        <link rel="stylesheet" href="https://raw.github.com/ccampbell/rainbow/master/themes/tricolore.css">
+
+        <script type="text/javascript" src="https://raw.github.com/ccampbell/rainbow/master/js/rainbow.min.js"></script>
+        <script type="text/javascript" src="https://raw.github.com/ccampbell/rainbow/master/js/language/generic.js"></script>
+        <script type="text/javascript" src="https://raw.github.com/ccampbell/rainbow/master/js/language/html.js"></script>
+        <script type="text/javascript" src="https://raw.github.com/ccampbell/rainbow/master/js/language/css.js"></script>
+    </head>
+    <body>
+        <header>
+            <div class="container">
+                <h1>CS 184 Style Guide <span class="muted">sans Bootstrap</span> </h1>
+            </div>
+        </header>
+        <div id="main">
+            <div class="container">
+                <section>
+                    <h2>Page organization</h2>
+                    <p>The page is divided into three components: <code data-language="css">header</code>, <code data-language="css">#main</code>, and <code data-language="css">footer</code>. Each component has a <code data-language="css">.container</code>. The <code data-language="css">.container</code> class provides a basic responsive layout to re-scale some of the content.</p>
+<pre><code data-language="html"><header>
+    <div class="container">...</div>
+</header>
+
+<div id="main">
+    <div class="container">...</div>
+</div>
+
+<footer>
+    <div class="container">...</div>
+</footer>
+</code></pre>
+                    <h3>Sections</h3>
+                    <p>Each division of this guide is organized into sections. There are no grids in the Bootstrap-less version, so all content should just be split up in large sections and styled individually. Section titles should range from <code>h2</code> to <code>h6</code> and can contain <code>.muted</code> subtitles. Each section (except the last one) has a 1 pixel border on the bottom to separate the content.</p>
+<pre><code data-language="html"><section>
+    <h2>Title <span class="muted">subtitle</span></h2>
+    ...
+</section>
+</code></pre>
+                </section>
+
+                <section>
+                    <h2>Elements</h2>
+                    <p>All HTML elements should render pretty nicely, following the minimalist aesthetic provided by the <a href="http://www.getskeleton.com">Skeleton CSS</a> framework and my own modifications, but I'll go over a few to demonstrate it.</p>
+                    <h3>Titles <span class="muted">(inverted Star Wars credits, pretty much)</span></h3>
+
+                    <h1>Heading 1</h1>
+                    <h2>Heading 2 <span class="muted">(<code>.muted</code> works here too!)</span> </h2>
+                    <h3>Heading 3</h3>
+                    <h4>Heading 4</h4>
+                    <h5>Heading 5</h5>
+                    <h6>Heading 6</h6>
+
+                    <h3>Lists</h3>
+                    <ul class="square">
+                        <li>Apples</li>
+                        <li>Oranges</li>
+                        <li>Pears</li>
+                        <li>Bananas</li>
+                    </ul>
+
+                    <ol>
+                        <li>Take CS184</li>
+                        <li>???</li>
+                        <li>Profit</li>
+                    </ol>
+
+                    <pre><code data-language="html"><ul class="square">
+    <li>Apples</li>
+    <li>Oranges</li>
+    <li>Pears</li>
+    <li>Bananas</li>
+</ul>
+
+<ol>
+    <li>Take CS184</li>
+    <li>???</li>
+    <li>Profit</li>
+</ol>
+</code></pre>
+
+                    <h3>Forms</h3>
+                    <form action="">
+                        <label for="regularInput">Regular Input</label>
+                        <input type="text" id="regularInput" />
+                        
+                        <label for="regularTextarea">Regular Textarea</label>
+                        <textarea id="regularTextarea"></textarea>
+                        
+                        <label for="selectList">Select List</label>
+                        <select id="selectList">
+                          <option value="Option 1">Option 1</option>
+                          <option value="Option 2">Option 2</option>
+                          <option value="Option 3">Option 3</option>
+                        </select>
+                        
+                        <fieldset>
+                          <label for="">Checkboxes</label>
+                          <label for="regularCheckbox">
+                            <input type="checkbox" id="regularCheckbox" value="checkbox 1" />
+                            <span>Regular Checkbox</span>
+                          </label>
+                        
+                          <label for="secondRegularCheckbox">
+                            <input type="checkbox" id="secondRegularCheckbox" value="checkbox 2" />
+                            <span>Regular Checkbox</span>
+                          </label>
+                        </fieldset>
+                        
+                        <fieldset>
+                          <label for="">Radio Buttons</label>
+                          <label for="regularRadio">
+                            <input type="radio" name="radios" id="regularRadio" value="radio 1" />
+                            <span>Regular Radio</span>
+                          </label>
+                          <label for="secondRegularRadio">
+                            <input type="radio" name="radios" id="secondRegularRadio" value="radio 2" />
+                            <span>Regular Radio</span>
+                          </label>
+                        </fieldset>
+                        <button type="submit">Submit Form</button>
+                     
+                    </form>
+
+                    <pre><code data-language="html"><form action="">
+    <label for="regularInput">Regular Input</label>
+    <input type="text" id="regularInput" />
+    
+    <label for="regularTextarea">Regular Textarea</label>
+    <textarea id="regularTextarea"></textarea>
+    
+    <label for="selectList">Select List</label>
+    <select id="selectList">
+      <option value="Option 1">Option 1</option>
+      <option value="Option 2">Option 2</option>
+      <option value="Option 3">Option 3</option>
+    </select>
+    
+    <fieldset>
+      <label for="">Checkboxes</label>
+      <label for="regularCheckbox">
+        <input type="checkbox" id="regularCheckbox" value="checkbox 1" />
+        <span>Regular Checkbox</span>
+      </label>
+    
+      <label for="secondRegularCheckbox">
+        <input type="checkbox" id="secondRegularCheckbox" value="checkbox 2" />
+        <span>Regular Checkbox</span>
+      </label>
+    </fieldset>
+    
+    <fieldset>
+      <label for="">Radio Buttons</label>
+      <label for="regularRadio">
+        <input type="radio" name="radios" id="regularRadio" value="radio 1" />
+        <span>Regular Radio</span>
+      </label>
+      <label for="secondRegularRadio">
+        <input type="radio" name="radios" id="secondRegularRadio" value="radio 2" />
+        <span>Regular Radio</span>
+      </label>
+    </fieldset>
+    <button type="submit">Submit Form</button>
+ 
+</form></code></pre>
+
+                    <h3>Code <span class="muted">(this is about to get a little meta)</span></h3>
+                    <p>Code blocks can be written using the <code>pre</code> and <code>code</code> tags. The <code>data-language</code> attribute is used to specify (you guessed it!) the language.</p>
+<pre><code data-language="html"><pre>
+    
+    <code data-language="html">
+        <p>Sexy code blocks, thanks to rainbow.js</p>
+    </code>
+</pre>
+</code></pre>
+                </section>
+            </div>
+        </div id="main">
+        <footer>
+            <div class="container">
+                <p>This is the end of the document. I hope it was inspiring!</p>
+            </div>
+        </footer>
+    </body>
+</html>

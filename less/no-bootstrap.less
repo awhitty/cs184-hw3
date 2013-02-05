@@ -1,0 +1,89 @@
+@font-face {
+    font-family: "Mission Script";
+    src: url("/font/Mission-Script.otf");
+}
+
+@font-face {
+    font-family: "Proxima Nova Bold";
+    src: url("/font/proximanova-bold.ttf");
+}
+
+@font-face {
+    font-family: "Proxima Nova";
+    src: url("/font/Proxima-Nova-Regular.otf");
+}
+
+@import url("skeleton/base.less");
+@import url("skeleton/skeleton.less");
+@import url("github.less");
+
+h1, h2, h3, h4, h5, h6
+{
+	font-family: "Proxima Nova Bold";
+
+	.muted
+	{
+		color: rgba(0,0,0,.5);
+		font-family: "Proxima Nova";
+		font-size: 75%;
+	}
+}
+
+.container
+{
+	width: 760px;
+	margin: 0 auto;
+}
+
+// Responsive media queries
+@media only screen and (max-width: 959px) { .container { width: 760px; } }
+/* Tablet Portrait size to standard 960 (devices and browsers) */
+@media only screen and (min-width: 768px) and (max-width: 959px) { .container { width: 680px; } }
+/* All Mobile Sizes (devices and browser) */
+@media only screen and (max-width: 767px) { .container { width: 660px; } }
+/* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
+@media only screen and (min-width: 480px) and (max-width: 767px) { .container { width: 460px; } }
+/* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
+@media only screen and (max-width: 479px) { .container { width: 360px; } }
+
+
+
+body
+{
+	background: #333;
+}
+
+header
+{
+	padding-top: 60px;
+	padding-bottom: 30px;
+
+	background: #eee;
+}
+
+#main
+{
+	background: #fff;
+	padding-top: 30px;
+
+	section
+	{
+		padding-top: 30px;
+		padding-bottom: 30px;
+
+		border-bottom: 1px solid #ccc;
+
+		&:last-of-type
+		{
+			border: none;
+		}
+	}
+}
+
+footer
+{
+	padding-top: 60px;
+	padding-bottom: 30px;
+
+	color: #fff;
+}
